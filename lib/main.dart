@@ -205,12 +205,14 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void tapNumber(String number) {
-    setState(() {
-      if (tmpNumber == '0') {
-        tmpNumber = '';
-      }
-      tmpNumber += number;
-    });
+    setState(
+      () {
+        if (tmpNumber == '0') {
+          tmpNumber = '';
+        }
+        tmpNumber += number;
+      },
+    );
   }
 
   void clearNumber() {
